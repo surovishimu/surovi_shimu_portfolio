@@ -1,0 +1,47 @@
+/* Add this to your CSS or styling framework */
+.active-tab {
+  background-color: rgb(67, 10, 102);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+
+}
+
+/* ImageScroll.css */
+@keyframes slowScroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 2000px;
+  height: 300px;
+  overflow: hidden;
+
+}
+
+.scroll-image {
+  width: 100%;
+  height: auto;
+}
+
+.image-container:hover .scroll-image {
+  animation: slowScroll 10s linear infinite;
+}
+@media (max-width: 576px) {
+  .image-container {
+    width: 100%;
+    height: 100px; /* Adjust the height for small screens */
+    max-width: 100%;
+  }
+
+  .image-container:hover .scroll-image {
+    animation: none;
+  }
+}
+
